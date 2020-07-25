@@ -1,3 +1,9 @@
+============== 25/07/2020 2.0 ==============
+
+    Criado CartComponent
+    Criado o addToCart deslogado
+    Inserido Logo RCA no Header
+
 ============== 25/07/2020 1.1 ==============
 
     Criado HeaderBarComponent

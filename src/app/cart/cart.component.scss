@@ -1,0 +1,9 @@
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    figure {
+        max-width: 126px;
+        margin-right: 17px;
+    }
+}
