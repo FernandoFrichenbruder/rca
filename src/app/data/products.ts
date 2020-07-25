@@ -4,27 +4,27 @@ export const products = [
       name: 'Call of Duty',
       price: 799,
       consoles: ['PC', 'PS4', 'XBox'],
-      thumbnail: 'imagem.jpg'
+      thumbnail: 'cyber_punk.png'
     },
     {
         id: 2,
         name: 'Dota 2',
         price: 799,
         consoles: ['PC'],
-        thumbnail: 'imagem.jpg'
+        thumbnail: 'days_gone.png'
       },
       {
         id: 3,
         name: 'World of Warcraft',
         price: 799,
         consoles: ['PC'],
-        thumbnail: 'imagem.jpg'
+        thumbnail: 'gof_of_war.png'
       },
       {
         id: 4,
         name: 'Fifa 2020',
         price: 799,
         consoles: ['PC', 'PS4', 'XBox'],
-        thumbnail: 'imagem.jpg'
+        thumbnail: 'the_last_of_us.png'
       },
   ];
