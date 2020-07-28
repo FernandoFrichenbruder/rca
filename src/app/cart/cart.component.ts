@@ -10,7 +10,6 @@ import { CartService } from '../cart.service';
 export class CartComponent implements OnInit {
   
   items;
-  amount: number = 1;
   constructor(
     private cartService: CartService,
   ) { }
@@ -19,12 +18,14 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  increment() {
-    this.amount += 1;
+  increment(productId) {
+    this.cartService.increment(productId);
+    this.items = this.cartService.getItems();
   }
 
-  decrement() {
-    (this.amount > 0)? this.amount -= 1: this.amount = 0;
+  decrement(productId) {
+    this.cartService.decrement(productId)
+    this.items = this.cartService.getItems();
   }
 
   getAmount() {

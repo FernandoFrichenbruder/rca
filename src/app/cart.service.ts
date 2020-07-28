@@ -28,11 +28,33 @@ export class CartService {
     console.log(this.items);
   }
 
+  increment(productId){
+    console.log(productId)
+    for(var i = 0; i < this.items.length; i++){
+      if(this.items[i].product.id == productId){
+        this.items[i].amount += 1;
+      }
+    }
+  }
+
+  decrement(productId){
+    
+    for(var i = 0; i < this.items.length; i++){
+      if(this.items[i].product.id == productId){
+        (this.items[i].amount > 0)? this.items[i].amount -= 1: this.items[i].amount = 0;
+      }
+    }
+  }
+
   getItems() {
     return this.items;
   }
 
   getAmount() {
-    return this.items.length;
+    var amount = 0;
+    for(var i = 0; i < this.items.length; i++){
+      amount += this.items[i].amount;
+    }
+    return amount;
   }
 }

@@ -12,9 +12,9 @@
     </div>
 
     <div class="column amount-area">
-        <button (click)="decrement()">-</button>
-        <input type="text" class="amount" [value]="amount" disabled/>
-        <button (click)="increment()">+</button>
+        <button (click)="decrement(item.product.id)">-</button>
+        <input type="text" class="amount" [value]="item.amount" disabled/>
+        <button (click)="increment(item.product.id)">+</button>
     </div>
 
     <p class="column price">$ {{item.product.price}}</p>
