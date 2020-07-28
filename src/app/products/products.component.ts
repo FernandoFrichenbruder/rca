@@ -12,6 +12,7 @@ export class ProductsComponent implements OnInit {
 
   products = products;
   amount: number;
+  toggle: boolean = false;
 
   constructor(
     private cartService: CartService

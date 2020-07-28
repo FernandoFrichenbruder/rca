@@ -3,10 +3,10 @@
 <div *ngFor="let item of items" class="columns cart">
     <div class="column">
         <div class="cart-item">
-            <img [src]="'/assets/products/'+ item.thumbnail"  />
+            <img [src]="'/assets/products/'+ item.product.thumbnail"  />
             <div class="cart-content">
-                <p class="item-title">{{item.name}}</p>
-                <p class="subtitle">{{item.consoles}}</p>
+                <p class="item-title">{{item.product.name}}</p>
+                <p class="subtitle">{{item.product.consoles}}</p>
             </div>
         </div>
     </div>
@@ -17,5 +17,5 @@
         <button (click)="increment()">+</button>
     </div>
 
-    <p class="column price">$ {{item.price}}</p>
+    <p class="column price">$ {{item.product.price}}</p>
 </div>
