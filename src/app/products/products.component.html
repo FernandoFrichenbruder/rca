@@ -1,22 +1,28 @@
-<h2 class="title is-2">Products</h2>
+<div class="columns header">
+    <h2 class="title">Products</h2>
+    <div class="cart">
+        <a routerLink="/cart">
+            <img src="/assets/cart.png" alt="Cart" />
+        </a>
+        <p class="amount">{{amount}}</p>
+    </div>
+</div>
 
 <div class="columns">
-    <div *ngFor="let product of products" class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+    <div *ngFor="let product of products" class="column product">
         <div class="card">
             <header class="card-header">
-                <h4 class="card-header-title">{{product.name}}</h4>
-                <h4 class="card-header-icon">{{product.price}}</h4>
-              </header>
-            <div class="card-content">
-                <div class="midia">
-                    <figure class="image">
-                        <img [src]="'/assets/products/'+ product.thumbnail"  />
-                    </figure>
-                  </div>
+                <div class="card-title">
+                    <h4>{{product.name}}</h4>
+                    <span>{{product.consoles}}</span>
+                </div>
+                
+                <span class="card-price">${{product.price}}</span>
+            </header>
+            <div class="card-content card-center">
+                <img [src]="'/assets/products/'+ product.thumbnail" />
+                <button class="card-footer button" (click)="addToCart(product)">Add to Cart</button>
             </div>
-            <footer class="card-footer">
-                <button class="card-footer-item" (click)="addToCart(product)">Add to Cart</button>
-              </footer>
         </div>
     </div>
 </div>

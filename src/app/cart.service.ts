@@ -10,11 +10,15 @@ export class CartService {
     private http: HttpClient
   ) { }
 
-  addToCart(product){
+  addToCart(product) {
     this.items.push(product);
   }
 
-  getItems(){
+  getItems() {
     return this.items;
+  }
+
+  getAmount() {
+    return this.items.length;
   }
 }

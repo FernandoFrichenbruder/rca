@@ -1,28 +1,29 @@
-
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" [routerLink]="['/']">
-        <img src="/assets/logo.png" alt="Logo RCA" width="120" height="50"  />
-      </a>
-  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+  <div class="container">
+    <div class="header-left">
+      <div class="navbar-brand">
+        <a class="logo" [routerLink]="['/']">
+          <img src="/assets/logo.png" alt="Logo RCA" />
+        </a>
+      </div>
+      <a [routerLink]="['/']">
+        Products
       </a>
     </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-            <div class="navbar-item">
-            <div class="buttons">
-                <a class="button is-primary">
-                <strong>Login</strong>
-                </a>
-                <a routerLink="/cart" class="button is-light">
-                  Cart
-                </a>
-            </div>
-            </div>
+    <div class="navbar-menu">
+        <button class="button login" (click)="openLogin()">
+          Login
+        </button>
+        <div [class]="popover">
+          <div class="popover-arrow"></div>
+          <div class="popover-content">
+            <app-user></app-user>
+
+          </div>
         </div>
     </div>
-  </nav>
+  </div>
+</nav>
+<div class="banner">
+  <img src="/assets/banner.png" alt="Logo RCA" />
+</div>

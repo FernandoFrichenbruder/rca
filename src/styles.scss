@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+    background-color: #FAFAFA;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    @media (min-width: $breakpoint-lg) {
+        max-width: 1380px;
+    }
+    @media (min-width: $breakpoint-xg) {
+        max-width: 1550px;
+    }    
+}
+
+.button {
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #3877A1;
+    color: #FFF;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color:#333;
+}

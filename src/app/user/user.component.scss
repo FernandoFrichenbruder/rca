@@ -1,0 +1,38 @@
+
+.input {
+   border-radius: 5px; 
+   border-color: #D8C4C4;
+   border-width: 1px;
+   color: #367BA4;
+   width: 240px;
+   padding: 1rem 1.8rem 1rem 1.4rem;
+   font-size: 1rem;
+   background-color: #FFF;
+   margin-bottom: 15px;
+}
+
+.submit {
+    width: 100%;
+}
+
+.input::selection{
+    background-color: #FFF;
+}
+  
+.input::-moz-selection{
+    background-color: #FFF;
+}
+
+.input::-webkit-autofill {
+    background-color: #FFF;
+    color: #367BA4;
+}
+.input::-moz-autofill {
+    background-color: #FFF;
+    color: #367BA4;
+}
+
+::placeholder {
+    color: #367BA4;
+    opacity: 1;
+  }

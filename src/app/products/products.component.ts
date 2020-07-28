@@ -11,16 +11,21 @@ import { CartService } from '../cart.service';
 export class ProductsComponent implements OnInit {
 
   products = products;
+  amount: number;
 
   constructor(
     private cartService: CartService
   ) { }
 
   ngOnInit(): void {
+    this.amount = this.cartService.getAmount();
   }
 
   addToCart(product){
     this.cartService.addToCart(product);
+    this.amount = this.cartService.getAmount();
   }
+
+  
 
 }
