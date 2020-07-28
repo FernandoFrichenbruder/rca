@@ -29,6 +29,6 @@ export class CartComponent implements OnInit {
   }
 
   getAmount() {
-    return this.amount;
+    return this.cartService.getAmount();
   }
 }

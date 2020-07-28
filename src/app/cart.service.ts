@@ -25,7 +25,6 @@ export class CartService {
     } else {
       this.items.push({ amount: 1, product});
     }
-    console.log(this.items);
   }
 
   increment(productId){

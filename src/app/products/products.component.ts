@@ -24,7 +24,16 @@ export class ProductsComponent implements OnInit {
 
   addToCart(product){
     this.cartService.addToCart(product);
+    this.changeButtonColor(product);
     this.amount = this.cartService.getAmount();
+  }
+
+  changeButtonColor(product){
+    console.log(product)
+    var items = this.cartService.getItems();
+    if (items.some(item => item.product.id == product.id )) {
+       product.added = true;
+    }
   }
 
   
