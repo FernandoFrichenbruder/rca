@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
 
   changeButtonColor(product){
     console.log(product)
-    var items = this.cartService.getItems();
+    let items = this.cartService.getItems();
     if (items.some(item => item.product.id == product.id )) {
        product.added = true;
     }
